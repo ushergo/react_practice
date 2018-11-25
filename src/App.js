@@ -1,11 +1,13 @@
 import React, {Component} from 'react';
 import './App.css';
 
-import {BrowserRouter, Route, Link} from 'react-router-dom';
+import {BrowserRouter, Route} from 'react-router-dom';
 
 import Home from './components/Home';
 import Product from './components/Product';
 import About from './components/About';
+import LikeButton from './components/LikeButton'
+import LoveButton from './components/LoveButton'
 
 class App extends Component {
 
@@ -34,6 +36,11 @@ class App extends Component {
                     </div>
 
                 </BrowserRouter>
+
+                <LikeButton initialCount="10"></LikeButton>
+
+                <LoveButton times="200"></LoveButton>
+
             </div>
         );
     }
