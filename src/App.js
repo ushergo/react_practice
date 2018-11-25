@@ -20,10 +20,19 @@ class App extends Component {
             margin: '10px auto'
         }
 
+        let browserCss={
+               a:{
+                   display:"inline-block",
+                   width:"20px",
+                   height:'20px',
+                   textAligh:"center",
+                   lineHeight:"20px"
+               }
+        }
         return (
             <div className="App">
                 <BrowserRouter>
-                    <div>
+                    <div className="nav">
                         <a href="/abc">Home</a>
                         <a href="/abc1">产品</a>
                         <a href="/abc2">我们</a>
@@ -39,7 +48,7 @@ class App extends Component {
 
                 <LikeButton initialCount="10"></LikeButton>
 
-                <LoveButton times="200"></LoveButton>
+                <LoveButton times="2030"></LoveButton>
 
             </div>
         );
