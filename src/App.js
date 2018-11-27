@@ -8,6 +8,9 @@ import Product from './components/Product';
 import About from './components/About';
 import LikeButton from './components/LikeButton'
 import LoveButton from './components/LoveButton'
+import RefsInput from "./components/RefsInput";
+import CompositeAvatorComponent from "./components/CompositeAvatorComponent";
+
 
 class App extends Component {
 
@@ -20,15 +23,6 @@ class App extends Component {
             margin: '10px auto'
         }
 
-        let browserCss={
-               a:{
-                   display:"inline-block",
-                   width:"20px",
-                   height:'20px',
-                   textAligh:"center",
-                   lineHeight:"20px"
-               }
-        }
         return (
             <div className="App">
                 <BrowserRouter>
@@ -49,6 +43,10 @@ class App extends Component {
                 <LikeButton initialCount="10"></LikeButton>
 
                 <LoveButton times="2030"></LoveButton>
+
+                <RefsInput></RefsInput>
+
+                <CompositeAvatorComponent></CompositeAvatorComponent>
 
             </div>
         );
