@@ -10,11 +10,24 @@ import LikeButton from './components/LikeButton'
 import LoveButton from './components/LoveButton'
 import RefsInput from "./components/RefsInput";
 import CompositeAvatorComponent from "./components/CompositeAvatorComponent";
-
+import Map from './components/map';
+import  ReactChildrenListToLi from './components/ReactChildrenListToLi';
 
 class App extends Component {
 
+    constructor(props)
+    {
+        super(props);
+
+        //arrayDiv 变为一个带有dom元素的属性
+        const arrayDivs=[<div key="1">aaa</div>,<div key="2">bbb</div>,<div key="3">ccc</div>];
+        this.state={arrayDiv:arrayDivs}
+    }
+
+
+
     render() {
+
         var div_css = {
             width: 200,
             height: 200,
@@ -22,7 +35,6 @@ class App extends Component {
             background: 'green',
             margin: '10px auto'
         }
-
         return (
             <div className="App">
                 <BrowserRouter>
@@ -47,6 +59,15 @@ class App extends Component {
                 <RefsInput></RefsInput>
 
                 <CompositeAvatorComponent></CompositeAvatorComponent>
+
+                <Map></Map>
+
+                <div> {this.state.arrayDiv} </div>
+
+                <ReactChildrenListToLi>
+                    <span>admin</span>
+                    <span>info</span>
+                </ReactChildrenListToLi>
 
             </div>
         );
