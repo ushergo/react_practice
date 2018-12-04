@@ -7,6 +7,7 @@ class Map extends React.Component {
         this.state = {names: ["sdfsdf", "sdd33333", "444444"]}
     }
 
+
     render() {
         return (
             <div>
